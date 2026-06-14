@@ -18,8 +18,13 @@ flowchart TD
     H --> I[Semantic retrieval]
     G --> J[Claim extraction]
     G --> K[Evidence ranking]
-    J --> L[Final synthesis]
-    K --> L
+    J --> M[Contradiction detector]
+    K --> M
+    M --> L[Final synthesis]
+    L --> N[Streamlit App Dashboard]
+    M --> N
+    K --> N
+    J --> N
 ```
 
 ## Main Scripts
@@ -33,9 +38,10 @@ flowchart TD
 - `generate_embeddings.py` - creates sentence embeddings for cleaned papers.
 - `retrieval.py` - searches the embedded dataset by semantic similarity.
 - `claim_extractor.py` - extracts structured claims using Ollama.
-- `evidence_ranker.py` - scores papers by heuristic evidence strength.
-- `contradiction_detector.py` - identifies contradictions from extracted claims.
-- `final_synthesis.py` - synthesizes a final answer from claims and evidence.
+- `evidence_ranker.py` - classifies papers by Oxford Levels of Evidence, extracts sample sizes, and assigns scores.
+- `contradiction_detector.py` - identifies contradictions from extracted claims using pairwise LLM comparison.
+- `final_synthesis.py` - synthesizes an advanced final report from claims, contradiction records, and evidence quality metrics.
+- `app.py` - launches the premium Streamlit interactive web dashboard to visualize findings.
 
 ## Setup
 
@@ -87,8 +93,74 @@ python retrieval.py --input dataset/clean_papers_with_embeddings.csv --query "me
 python claim_extractor.py --input dataset/clean_papers.csv --output dataset/claims.csv --limit 50 --save-every 10
 ```
 
+## Evidence Ranking (Oxford Levels & Sample Size Extraction)
+
+Ranks and updates metadata for papers:
+
+```powershell
+python evidence_ranker.py
+```
+
+Produces:
+- `dataset/ranked_papers.csv` (contains Oxford clinical design labels, sample size extractions, and scaled scores)
+
+## Contradiction detection
+
+The contradiction detector uses a multi-stage pipeline:
+
+1. **Semantic pre-filtering** — embeds claims and selects the most relevant pairs by cosine similarity
+2. **Pairwise LLM analysis** — classifies each pair as AGREEMENT / CONTRADICTION / PARTIAL_AGREEMENT / UNRELATED
+3. **Evidence-weighted scoring** — integrates evidence quality scores from `evidence_ranker.py`
+4. **Cluster & synthesise** — generates a focused synthesis from high-confidence results
+5. **Report generation** — outputs JSON, Markdown, plain-text, and CSV reports
+
+Basic usage:
+
+```powershell
+python contradiction_detector.py
+```
+
+With options:
+
+```powershell
+python contradiction_detector.py --max-pairs 20 --similarity-threshold 0.4 --evidence-file dataset/ranked_papers.csv
+```
+
+Skip embedding pre-filtering:
+
+```powershell
+python contradiction_detector.py --no-embeddings --max-pairs 15
+```
+
+Outputs produced:
+
+- `dataset/contradictions.json` — full structured results
+- `dataset/contradictions_report.md` — rich Markdown report with tables
+- `dataset/contradictions.txt` — plain-text report (backward compatible)
+- `dataset/contradictions.csv` — all pairwise results as CSV
+
+## Final Synthesis
+
+Compiles the final advanced markdown and text reports leveraging contradiction outputs and ranked evidence levels:
+
+```powershell
+python final_synthesis.py
+```
+
+Produces:
+- `dataset/final_synthesis.txt` (Plain text report)
+- `dataset/final_synthesis.md` (Markdown report)
+
+## Interactive Dashboard UI
+
+Launch the Streamlit app to explore metrics, synthesis summaries, contradictions list, and ranked clinical datasets:
+
+```powershell
+streamlit run app.py
+```
+
 ## Notes
 
 - `venv/` is intentionally ignored and should not be committed.
 - The Semantic Scholar collector uses conservative pacing and retries because the API is rate-limited.
-- `claim_extractor.py` requires a local Ollama instance to be running.
+- `claim_extractor.py`, `contradiction_detector.py`, and `final_synthesis.py` require a local Ollama instance to be running.

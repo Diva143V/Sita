@@ -1,0 +1,165 @@
+"""End-to-end dataset builder for the paper collection pipeline.
+
+Pipeline:
+  PubMed fetcher
+  PMC fetcher
+  Semantic Scholar fetcher
+      ↓
+  Merge results
+      ↓
+  Remove duplicates (prefer PubMed > PMC > SemanticScholar)
+      ↓
+  Save final dataset
+
+Optionally runs `clean_dataset.py` afterward.
+"""
+from __future__ import annotations
+
+import argparse
+import os
+import subprocess
+import sys
+from typing import Dict
+
+import pandas as pd
+
+from collect_pmc import collect as collect_pmc
+from collect_pubmed import collect as collect_pubmed
+from collect_semanticscholar import collect as collect_semanticscholar
+
+
+SOURCES: Dict[str, str] = {
+    "PubMed": "dataset/pubmed.csv",
+    "PMC": "dataset/pmc.csv",
+    "SemanticScholar": "dataset/semantic_scholar.csv",
+}
+
+
+def ensure_dataset_dir() -> None:
+    os.makedirs("dataset", exist_ok=True)
+
+
+def run_collectors(query: str, args) -> None:
+    ensure_dataset_dir()
+
+    print("Running PubMed collector...")
+    pubmed_df = collect_pubmed(
+        query,
+        email=args.email,
+        batch_size=args.pubmed_batch_size,
+        rate_limit_sec=args.pubmed_rate_limit,
+    )
+    pubmed_df.to_csv(SOURCES["PubMed"], index=False)
+    print(f"Saved {SOURCES['PubMed']} with {len(pubmed_df)} records")
+
+    print("Running Europe PMC collector...")
+    pmc_df = collect_pmc(
+        query,
+        page_size=args.pmc_page_size,
+        max_pages=args.pmc_max_pages,
+        rate_limit_sec=args.pmc_rate_limit,
+    )
+    pmc_df.to_csv(SOURCES["PMC"], index=False)
+    print(f"Saved {SOURCES['PMC']} with {len(pmc_df)} records")
+
+    print("Running Semantic Scholar collector...")
+    ss_df = collect_semanticscholar(
+        query,
+        limit=args.ss_limit,
+        offset=args.ss_offset,
+        max_pages=args.ss_max_pages,
+        delay=args.ss_delay,
+    )
+    ss_df.to_csv(SOURCES["SemanticScholar"], index=False)
+    print(f"Saved {SOURCES['SemanticScholar']} with {len(ss_df)} records")
+
+
+def merge_and_dedup(output: str, max_results: int | None = None) -> pd.DataFrame:
+    frames = []
+
+    for name, path in SOURCES.items():
+        if not os.path.exists(path):
+            print(f"Source missing: {path} (skipping)")
+            continue
+        try:
+            df = pd.read_csv(path)
+            if "source" not in df.columns:
+                df["source"] = name
+            print(f"{name} papers: {len(df)} -- loaded from {path}")
+            frames.append(df)
+        except Exception as exc:
+            print(f"Failed to read {path}: {exc}")
+
+    if not frames:
+        raise RuntimeError("No source CSVs found to merge")
+
+    all_papers = pd.concat(frames, ignore_index=True)
+    print("Before removing duplicates:", len(all_papers))
+
+    if "title" in all_papers.columns:
+        all_papers["title_norm"] = all_papers["title"].astype(str).str.strip().str.lower()
+    else:
+        all_papers["title_norm"] = all_papers.index.astype(str)
+
+    priority = {"PubMed": 0, "PMC": 1, "SemanticScholar": 2}
+    all_papers["source_priority"] = all_papers.get("source", "").map(priority).fillna(99)
+    all_papers = all_papers.sort_values(["source_priority"], ascending=True)
+
+    before = len(all_papers)
+    all_papers = all_papers.drop_duplicates(subset=["title_norm"], keep="first")
+    print("After removing duplicates:", len(all_papers), f"(removed {before - len(all_papers)})")
+
+    all_papers = all_papers.drop(columns=["title_norm", "source_priority"], errors="ignore")
+
+    if "abstract" in all_papers.columns:
+        all_papers = all_papers.dropna(subset=["abstract"])
+        all_papers = all_papers[all_papers["abstract"].astype(str).str.strip() != ""]
+    print("After removing empty abstracts:", len(all_papers))
+
+    if max_results is not None:
+        all_papers = all_papers.head(max_results)
+        print(f"Trimmed to top {len(all_papers)} results (max-results={max_results})")
+
+    os.makedirs(os.path.dirname(output), exist_ok=True)
+    all_papers.to_csv(output, index=False)
+    print(f"Saved {output} ({len(all_papers)} records)")
+    return all_papers
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Build the paper dataset end-to-end")
+    parser.add_argument("--query", default="metformin breast cancer")
+
+    parser.add_argument("--email", default=os.environ.get("ENTREZ_EMAIL", ""), help="Entrez email (or set ENTREZ_EMAIL env var)")
+    parser.add_argument("--pubmed-batch-size", type=int, default=100)
+    parser.add_argument("--pubmed-rate-limit", type=float, default=0.5)
+
+    parser.add_argument("--pmc-page-size", type=int, default=100)
+    parser.add_argument("--pmc-max-pages", type=int, default=1)
+    parser.add_argument("--pmc-rate-limit", type=float, default=1.0)
+
+    parser.add_argument("--ss-limit", type=int, default=20)
+    parser.add_argument("--ss-offset", type=int, default=0)
+    parser.add_argument("--ss-max-pages", type=int, default=3)
+    parser.add_argument("--ss-delay", type=float, default=1.5)
+
+    parser.add_argument("--max-results", type=int, default=100)
+    parser.add_argument("--output", default="dataset/final_papers.csv")
+    parser.add_argument("--run-filter", action="store_true", help="Run clean_dataset.py after saving final_papers.csv")
+
+    args = parser.parse_args()
+
+    if not args.email:
+        print("Error: Entrez email not set. Provide --email or set ENTREZ_EMAIL env var.")
+        sys.exit(1)
+
+    run_collectors(args.query, args)
+    merge_and_dedup(args.output, max_results=args.max_results)
+
+    if args.run_filter:
+        print("Running clean_dataset.py...")
+        subprocess.run([sys.executable, "clean_dataset.py"], check=True)
+
+
+if __name__ == "__main__":
+    main()

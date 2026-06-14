@@ -1,0 +1,290 @@
+title,claim,stance,reason,claim_output,model
+transcriptomic modulation of inflammasome-related genes following metformin administration in breast cancer patients with paclitaxel-induced neuropathy.,,,,"ERROR: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download",llama3.1:8b
+nanoparticle-based radiosensitization in breast cancer: a multimodal approach to therapy and immune regulation.,,,,"ERROR: Failed to connect to Ollama. Please check that Ollama is downloaded, running and accessible. https://ollama.com/download",llama3.1:8b
+"safety analyses of the inavo120 randomised phase iii trial of inavolisib or placebo with palbociclib-fulvestrant in patients with pik3ca-mutated, hormone receptor-positive, her2-negative, endocrine-resistant advanced breast cancer.","Inavolisib has a generally consistent, manageable, and tolerable safety profile when combined with palbociclib-fulvestrant.",support,"The abstract states that the safety profile of inavolisib is ""generally consistent"" and ""manageable"" based on analyses of adverse events.","Claim: Inavolisib has a generally consistent, manageable, and tolerable safety profile when combined with palbociclib-fulvestrant.
+Stance: Support
+Reason: The abstract states that the safety profile of inavolisib is ""generally consistent"" and ""manageable"" based on analyses of adverse events.",llama3.1:8b
+sternoclavicular joint infection caused by staphylococcus capitis.,Staphylococcus capitis is a causative agent of sternoclavicular joint infection.,support,The case report presents a patient with confirmed S. capitis infection in the sternoclavicular joint.,"Claim: Staphylococcus capitis is a causative agent of sternoclavicular joint infection.
+Stance: support
+Reason: The case report presents a patient with confirmed S. capitis infection in the sternoclavicular joint.
+
+Claim: Early diagnosis and individualized treatment strategies are crucial for effective management of sternoclavicular joint infections caused by staphylococcus capitis.
+Stance: neutral
+Reason: This claim is not explicitly made, but rather stated as a goal of the case report.
+
+Claim: Sternoclavicular joint infections caused by Staphylococcus capitis can be effectively treated with antibiotics and surgical debridement.
+Stance: support
+Reason: The patient's symptoms improved significantly after treatment with antibiotics and surgery.",llama3.1:8b
+polycystic ovary syndrome and its association with reproductive cancers in women.,Women with PCOS are at a higher risk of multiple reproductive cancers.,support,"The study found significantly higher hazard ratios for breast, uterine, ovarian/fallopian tube, and cervical cancer in women with PCOS compared to those without.","Here is the extracted information:
+
+Claim: Women with PCOS are at a higher risk of multiple reproductive cancers.
+Stance: Support
+Reason: The study found significantly higher hazard ratios for breast, uterine, ovarian/fallopian tube, and cervical cancer in women with PCOS compared to those without.",llama3.1:8b
+assessment of alpelisib-induced hyperglycemia in a real-world setting: a nationwide claims data analysis.,Initiating alpelisib therapy is associated with higher use of antidiabetic agents.,support,"Statistical analysis showed a significant increase in antidiabetic agent usage post-alpelisib initiation (OR = 2.19, p < 0.001).","Claim: Initiating alpelisib therapy is associated with higher use of antidiabetic agents.
+Stance: Support
+Reason: Statistical analysis showed a significant increase in antidiabetic agent usage post-alpelisib initiation (OR = 2.19, p < 0.001).
+
+ Claim: Individuals who started antidiabetic agents after initiating alpelisib had longer therapy duration.
+Stance: Support
+Reason: The study found that those who initiated antidiabetic agents after starting alpelisib had a longer tot compared to those who did not receive antidiabetic agents (HR = 0.76, p = 0.008).",llama3.1:8b
+association between hba1c and breast cancer risk in women with type 2 diabetes mellitus: a case-control study.,Elevated HbA1c levels (≥7.0%) are associated with an increased risk of breast cancer in women with type 2 diabetes mellitus.,support,"The study found a statistically significant association between poor glycemic control and breast cancer presence, adjusting for confounders.","Here are the extracted information:
+
+Claim: Elevated HbA1c levels (≥7.0%) are associated with an increased risk of breast cancer in women with type 2 diabetes mellitus.
+Stance: Support
+Reason: The study found a statistically significant association between poor glycemic control and breast cancer presence, adjusting for confounders.
+
+Alternatively, I can also present the claim as:
+
+Claim: Poor glycemic control (HbA1c ≥7.0%) is significantly associated with breast cancer risk in women with type 2 diabetes mellitus.
+Stance: Support
+Reason: The study found a significant association between high HbA1c levels and breast cancer presence, adjusting for confounders.",llama3.1:8b
+combination of ivermectin and metformin promotes autophagy in mcf‑7 cells by inhibiting phosphorylation of the pi3k/akt/mtor pathway.,Combination of ivermectin and metformin promotes autophagy in MCF-7 cells by inhibiting phosphorylation of the PI3K/AKT/MTOR pathway.,support,"The study shows that the combination therapy leads to reduced phosphorylation of key proteins and increased autophagosome formation, indicating activation of autophagy.","Claim: Combination of ivermectin and metformin promotes autophagy in MCF-7 cells by inhibiting phosphorylation of the PI3K/AKT/MTOR pathway.
+Stance: Support
+Reason: The study shows that the combination therapy leads to reduced phosphorylation of key proteins and increased autophagosome formation, indicating activation of autophagy.",llama3.1:8b
+survival and recurrence with glp-1 receptor agonists in breast cancer.,GLP-1 receptor agonists may improve survival and recurrence-free survival in breast cancer patients.,support,The study found significant associations between GLP-1 RA use and lower hazard of all-cause mortality and recurrence-free survival among certain patient groups.,"Here are the extracted information:
+
+Claim: GLP-1 receptor agonists may improve survival and recurrence-free survival in breast cancer patients.
+Stance: Support
+Reason: The study found significant associations between GLP-1 RA use and lower hazard of all-cause mortality and recurrence-free survival among certain patient groups.",llama3.1:8b
+management of advanced hr-positive breast cancer using metabolically supported chemotherapy and repurposed drugs: a case report.,"A comprehensive metabolic approach combining therapeutic ketosis, metabolically supported chemotherapy, physical modalities, and repurposed drugs can lead to a durable response in advanced HR-positive breast cancer.",support,The patient achieved a near complete response with sustained remission over three years following diagnosis.,"Claim: A comprehensive metabolic approach combining therapeutic ketosis, metabolically supported chemotherapy, physical modalities, and repurposed drugs can lead to a durable response in advanced HR-positive breast cancer.
+
+Stance: Support
+Reason: The patient achieved a near complete response with sustained remission over three years following diagnosis.",llama3.1:8b
+a novel combination for in vivo breast cancer treatment: tak1 inhibition combined with metformin and lentinula edodes compounds synergistically reinvigorates cd8(+) t cells.,The Tak-Met-Leme combination treatment can inhibit breast cancer progression.,support,"The study found that this combination significantly decreased tumor volume/weight, increased CD8+ T cells, and reduced cancer-related gene expression.","Here is the extracted information:
+
+Claim: The Tak-Met-Leme combination treatment can inhibit breast cancer progression.
+Stance: Support
+Reason: The study found that this combination significantly decreased tumor volume/weight, increased CD8+ T cells, and reduced cancer-related gene expression.",llama3.1:8b
+exploration of bmi and circulating metabolic factors as predictors of metformin benefit in cctg ma.32.,BMI and circulating metabolic factors do not predict Metformin benefit in BC subtypes.,neutral,"The study found no significant interactions between BMI, blood variables, and Metformin outcomes across different BC subtypes.","Here is the extracted information:
+
+Claim: BMI and circulating metabolic factors do not predict Metformin benefit in BC subtypes.
+Stance: Neutral
+Reason: The study found no significant interactions between BMI, blood variables, and Metformin outcomes across different BC subtypes.",llama3.1:8b
+ampk/mtorc2/akt-473/runx2 signaling axis modulates epithelial-mesenchymal transition and bone tropism in breast cancer.,Metformin enhances mTORC2 activity in a RUNX2-dependent manner.,support,The abstract states that metformin treatment resulted in enhanced mTORC2 activity mediated through RUNX2.,"Claim: Metformin enhances mTORC2 activity in a RUNX2-dependent manner.
+Stance: Support
+Reason: The abstract states that metformin treatment resulted in enhanced mTORC2 activity mediated through RUNX2.
+
+ Claim: The AMPK-RUNX2-mTORC2 signaling axis promotes EMT and bone metastasis in breast cancer cells.
+Stance: Support
+Reason: The abstract's results section demonstrates that this axis is involved in promoting EMT and enhancing bone metastatic potential.
+
+ Claim: Metformin's anti-cancer properties are context-dependent and vary with cellular and metabolic conditions.
+Stance: Neutral (previously established)
+ Reason: This statement serves as a background information and acknowledges the varying effects of metformin on tumor progression.",llama3.1:8b
+bile duct ligation impairs function and expression of breast cancer resistance protein in rat blood-retinal barrier mainly due to both the increased ammonia and bilirubin.,Bile duct ligation impairs function and expression of breast cancer resistance protein in rat blood-retinal barrier mainly due to both increased ammonia and bilirubin.,support,"The study's results demonstrate significant downregulation of BCRP expression and function, accompanied by increased levels of ammonia and bilirubin.","Here is the extracted information:
+
+Claim: Bile duct ligation impairs function and expression of breast cancer resistance protein in rat blood-retinal barrier mainly due to both increased ammonia and bilirubin.
+Stance: Support
+Reason: The study's results demonstrate significant downregulation of BCRP expression and function, accompanied by increased levels of ammonia and bilirubin.",llama3.1:8b
+the role of the hmgb1 c-terminal domain in epithelial-mesenchymal transition and invasion in 2d and 3d mda-mb-231 breast cancer models.,The Hmgb1 C-terminal domain plays a key role in regulating tumor aggressiveness.,support,The study found that truncation of this domain increased cellular plasticity and invasive potential in breast cancer models.,"Here is the extracted information:
+
+Claim: The Hmgb1 C-terminal domain plays a key role in regulating tumor aggressiveness.
+Stance: Support
+Reason: The study found that truncation of this domain increased cellular plasticity and invasive potential in breast cancer models.
+
+Let me know if you'd like me to extract anything else!",llama3.1:8b
+"studying synergistic anticancer effects of repurposed at(1)b losartan with antidiabetics metformin, rosiglitazone in triple-negative breast cancer cells.",Losartan and metformin have a synergistic effect in inhibiting triple-negative breast cancer cells.,support,The abstract reports a 1.6-fold increase in potency when losartan and metformin are combined.,"Claim: Losartan and metformin have a synergistic effect in inhibiting triple-negative breast cancer cells.
+Stance: Support
+Reason: The abstract reports a 1.6-fold increase in potency when losartan and metformin are combined.
+
+Claim: Concurrent administration of losartan and rosiglitazone at lower dosages has limitations in achieving further synergistic or additive effects.
+Stance: Contradict
+Reason: Although the combination treatment showed strong synergy, it did not yield additional benefits with lower doses.",llama3.1:8b
+overcoming immunotherapy resistance in breast cancer: a novel strategy by targeting the integrated stress response.,,,,"Here are the extracted information:
+
+1. Main claim: Targeting the integrated stress response (ISR) can overcome immunotherapy resistance in breast cancer.
+2. Stance: Support
+3. Reason: Preclinical studies demonstrate compelling efficacy of ISR-targeting agents in reversing immunosuppression and synergizing with immune checkpoint inhibitors.",llama3.1:8b
+metformin drives hif-1alpha-mediated dual metabolic reprogramming to enhance gammadelta t cell therapy in triple-negative breast cancer.,Metformin can enhance Gammadelta T cell therapy in Triple-Negative Breast Cancer.,support,"Results showed that metformin increased cytotoxicity, proliferation, and cytokine production of Gammadelta T cells.","Here is the extracted information:
+
+Claim: Metformin can enhance Gammadelta T cell therapy in Triple-Negative Breast Cancer.
+Stance: Support
+Reason: Results showed that metformin increased cytotoxicity, proliferation, and cytokine production of Gammadelta T cells.",llama3.1:8b
+tumor cell membrane-camouflaged nanoparticles co-delivering docetaxel and metformin for enhanced synergistic therapy of her2-positive breast cancer.,A biomimetic nanoplatform co-delivering docetaxel and metformin can achieve enhanced synergistic anti-tumor effects in HER2-positive breast cancer.,support,The study shows that the nanoparticles effectively suppressed tumor growth with no significant toxicity or body weight loss.,"Claim: A biomimetic nanoplatform co-delivering docetaxel and metformin can achieve enhanced synergistic anti-tumor effects in HER2-positive breast cancer.
+
+Stance: support
+Reason: The study shows that the nanoparticles effectively suppressed tumor growth with no significant toxicity or body weight loss.",llama3.1:8b
+metformin reduces senescence induced by obesity-related inflammation in luminal breast cancer through estrogen receptor beta modulation.,,,,"Here are the extracted information:
+
+1. Main claim:
+Metformin reduces senescence induced by obesity-related inflammation in luminal breast cancer through estrogen receptor beta modulation.
+
+2. Stance: Support
+3. Reason: The study's experimental results and analysis of patient datasets show that metformin mitigates the effects of obesity-related inflammation on luminal breast cancer cells, specifically by modulating ERbeta expression.",llama3.1:8b
+metformin enhances response to chemotherapy combined with immunotherapy in a triple negative breast cancer in vivo model.,Metformin enhances the response to chemotherapy combined with immunotherapy in a triple negative breast cancer model.,support,The study shows that tumor growth was inhibited more effectively when metformin was added to the treatment regimen.,"Claim: Metformin enhances the response to chemotherapy combined with immunotherapy in a triple negative breast cancer model.
+Stance: Support
+Reason: The study shows that tumor growth was inhibited more effectively when metformin was added to the treatment regimen.",llama3.1:8b
+metformin triggers apoptosis via endoplasmic reticulum stress in her2-positive breast cancer cell lines.,Metformin triggers apoptosis via endoplasmic reticulum stress in her2-positive breast cancer cell lines.,support,The study's findings demonstrated that metformin activates er stress response and induces apoptosis in a dose-dependent manner.,"Here is the extracted information:
+
+Claim: Metformin triggers apoptosis via endoplasmic reticulum stress in her2-positive breast cancer cell lines.
+Stance: Support
+Reason: The study's findings demonstrated that metformin activates er stress response and induces apoptosis in a dose-dependent manner.",llama3.1:8b
+piperine-induced ampk activation and cell cycle arrest: insights from molecular simulations and experimental validation in breast cancer.,,,,"Here are the extracted information:
+
+1. Main claim: Piperine activates AMPK and induces apoptosis, cell cycle arrest, and impairs migration in breast cancer cells.
+2. Stance: Support
+3. Reason: Molecular simulations and experimental validation show that piperine binds to AMPK with high affinity, leading to desired biological effects.",llama3.1:8b
+metformin as an immunometabolic modulator in breast cancer: integrating nk and nkt cell responses.,,,,"Here is the extracted information:
+
+1. Main claim: Metformin has anticancer potential through its immunometabolic modulating effects.
+2. Stance: Support
+3. Reason: Accumulating evidence indicates that metformin suppresses breast tumor growth by targeting key metabolic vulnerabilities and restoring innate immune effectors' functionality.",llama3.1:8b
+relationship between breast cancer and metformin: a bibliometric review.,Metformin may help manage the relationship between diabetes and breast cancer.,support,The study suggests that further experimental studies are needed to explore its potential use in treatment.,"Claim: Metformin may help manage the relationship between diabetes and breast cancer.
+Stance: Support
+Reason: The study suggests that further experimental studies are needed to explore its potential use in treatment.",llama3.1:8b
+wbp2 attenuates metformin response in her2-positive breast cancer cells by repressing ampk activation and inducing a lower amp:atp ratio state through enhanced atp production.,WBP2 inhibits the effectiveness of metformin in HER2-positive breast cancer cells.,support,The study's data and results show that WBP2 expression leads to reduced metformin response in these cells.,"Here is the extracted information:
+
+Claim: WBP2 inhibits the effectiveness of metformin in HER2-positive breast cancer cells.
+Stance: Support
+Reason: The study's data and results show that WBP2 expression leads to reduced metformin response in these cells.
+
+Alternatively, here are two other possible interpretations with different stances:
+
+1. Claim: WBP2 inhibits the effectiveness of metformin in HER2-positive breast cancer cells.
+Stance: Contradict
+Reason: The study suggests WBP2's role as a potential biomarker for patient stratification and repurposing metformin, implying that it could enhance metformin response rather than inhibit it.
+
+2. Claim: WBP2 inhibits the effectiveness of metformin in HER2-positive breast cancer cells.
+Stance: Neutral
+Reason: The study's findings are based on experimental data and should be interpreted with caution; more research is needed to confirm these results and determine their clinical significance.",llama3.1:8b
+metformin potentiates dsf/cu-loaded pluronic nanoparticles to improve therapeutic efficacy in triple-negative breast cancer.,Metformin potentiates the anticancer efficacy of dsf/cu-loaded pluronic nanoparticles against triple-negative breast cancer.,support,The study shows that metformin significantly enhances the anticancer activity of dsf/cu-loaded nanoparticles at sub-cytotoxic concentrations.,"Claim: Metformin potentiates the anticancer efficacy of dsf/cu-loaded pluronic nanoparticles against triple-negative breast cancer.
+Stance: Support
+Reason: The study shows that metformin significantly enhances the anticancer activity of dsf/cu-loaded nanoparticles at sub-cytotoxic concentrations.",llama3.1:8b
+therapeutic switching of metformin using heteroleptic cu(ii) and zn(ii) complexes: a combined experimental and computational study.,Metformin can be repurposed as an anticancer agent through metal complexation.,support,The study shows that Cu(II) and Zn(II) complexes of metformin exhibit significant anticancer activity against the breast cancer cell line MCF-7.,"Claim: Metformin can be repurposed as an anticancer agent through metal complexation.
+Stance: Support
+Reason: The study shows that Cu(II) and Zn(II) complexes of metformin exhibit significant anticancer activity against the breast cancer cell line MCF-7.",llama3.1:8b
+mtor-driven autophagy suppression defines metabolic vulnerability in cdk4/6 inhibitor-resistant hr(+)/her2(-) breast cancer.,Mtor-driven autophagy suppression is the underlying cause of metabolic vulnerability in cdk4/6 inhibitor-resistant hr(+)/her2(-) breast cancer.,support,The study found that resistant cells had impaired autophagy and were sensitive to metabolic inhibitors.,"Claim: Mtor-driven autophagy suppression is the underlying cause of metabolic vulnerability in cdk4/6 inhibitor-resistant hr(+)/her2(-) breast cancer.
+Stance: Support
+Reason: The study found that resistant cells had impaired autophagy and were sensitive to metabolic inhibitors.
+
+ Claim: Metabolic therapies can target cdk4/6i-resistant bc by targeting mtorc1-mediated autophagy defects.
+Stance: Neutral ( implied by the claim, but not a direct statement from the abstract)
+Reason: The study provides evidence for this possibility, but does not make a conclusive statement.
+
+ Claim: Mtorc1 activity and autophagy suppression are biomarkers for metabolic vulnerability in cdk4/6i-resistant bc.
+Stance: Support
+Reason: Immunohistochemical analysis showed a correlation between mtorc1 activity and autophagy suppression.",llama3.1:8b
+impact of type 2 diabetes on malignancies of the female reproductive system.,Type 2 diabetes mellitus significantly contributes to the development and progression of cancers in the female reproductive system.,support,"The abstract cites specific mechanisms, such as hyperinsulinemia and chronic low-grade inflammation, that disrupt endocrine and metabolic homeostasis and promote carcinogenesis.","Claim: Type 2 diabetes mellitus significantly contributes to the development and progression of cancers in the female reproductive system.
+Stance: Support
+Reason: The abstract cites specific mechanisms, such as hyperinsulinemia and chronic low-grade inflammation, that disrupt endocrine and metabolic homeostasis and promote carcinogenesis.",llama3.1:8b
+weight loss patterns and clinical outcomes of glp1 receptor agonists in breast cancer survivors.,GLP-1 receptor agonists are associated with modest weight loss and improved all-cause survival in breast cancer survivors.,support,The study found a significant association between GLP-1 use and reduced mortality risk.,"Claim: GLP-1 receptor agonists are associated with modest weight loss and improved all-cause survival in breast cancer survivors.
+Stance: Support
+Reason: The study found a significant association between GLP-1 use and reduced mortality risk. 
+
+Note: Although the study also mentions that GLP-1 did not affect disease-free survival, the overall conclusion is positive regarding its benefits for weight loss and survival.",llama3.1:8b
+unraveling ampk and bet regulation of immune checkpoint biology: implications for personalized medicine.,AMPK regulates immune checkpoint expression in TNBC patients.,support,The study found that activating AMPK improved ICB efficacy.,"Claim: AMPK regulates immune checkpoint expression in TNBC patients.
+Stance: Support
+Reason: The study found that activating AMPK improved ICB efficacy.
+
+Claim: BET proteins regulate immune checkpoint molecules through an AMPK-dependent pathway.
+Stance: Support
+Reason: Inhibition of AMPK reduced the regulation of PD-1 and CTLA-4 by BET proteins.
+
+Claim: Personalized approaches to ICB treatment can improve outcomes for TNBC patients with comorbid T2D.
+Stance: Support
+Reason: The study suggests that considering a patient's metabolic profile, such as diabetes status, can optimize ICB efficacy.",llama3.1:8b
+a robust rnai nanoplatform for precise activation of cgas-sting pathway and effective immune checkpoint blockade to potentiate cancer immunotherapy.,A new immunostimulatory RNA interfering nanoplatform can potentiate cancer immunotherapy by precisely activating the CGAS-STING pathway.,support,The abstract presents experimental data demonstrating its efficacy in suppressing breast cancer cell proliferation and tumor growth.,"Claim: A new immunostimulatory RNA interfering nanoplatform can potentiate cancer immunotherapy by precisely activating the CGAS-STING pathway.
+
+Stance: Support
+Reason: The abstract presents experimental data demonstrating its efficacy in suppressing breast cancer cell proliferation and tumor growth.",llama3.1:8b
+cardioprotective effects of dapagliflozin against doxorubicin-induced cardiotoxicity in breast cancer patients with type 2 diabetes: a prospective study.,Dapagliflozin may be considered a potential cardioprotective agent against doxorubicin-induced cardiotoxicity.,support,"The study found significant improvement in LVEF, LVGLS, and NT-proBNP parameters in the dapagliflozin group.","Claim: Dapagliflozin may be considered a potential cardioprotective agent against doxorubicin-induced cardiotoxicity.
+Stance: Support
+Reason: The study found significant improvement in LVEF, LVGLS, and NT-proBNP parameters in the dapagliflozin group.",llama3.1:8b
+metformin-mediated glycaemic regulation as a potential strategy for breast cancer prevention.,Metformin has the potential to prevent breast cancer.,support,The study identifies various molecular mechanisms by which metformin exerts anti-cancer effects on breast cancer cells.,"Claim: Metformin has the potential to prevent breast cancer.
+Stance: Support
+Reason: The study identifies various molecular mechanisms by which metformin exerts anti-cancer effects on breast cancer cells.",llama3.1:8b
+the synergistic effects of rharg with bcl-2 inhibitors or metformin co-treatment in multiple cancer cell models.,Rharg combined with Bcl-2 inhibitors or metformin co-treatment enhances anticancer effects.,support,Combination of these treatments significantly induced apoptosis in various cancer cell models.,"Here are the extracted information:
+
+Claim: Rharg combined with Bcl-2 inhibitors or metformin co-treatment enhances anticancer effects.
+Stance: Support
+Reason: Combination of these treatments significantly induced apoptosis in various cancer cell models.",llama3.1:8b
+universal antibody-engineered lipid nanoparticles potentiate chemo-immunotherapy against triple-negative breast cancer by reprogramming tumor cell metabolism.,Universal antibody-engineered lipid nanoparticles can potentiate chemo-immunotherapy against triple-negative breast cancer.,support,"The nanoparticles are shown to reprogram tumor cell metabolism, restore T lymphocyte activity, and amplify the immune response.","Claim: Universal antibody-engineered lipid nanoparticles can potentiate chemo-immunotherapy against triple-negative breast cancer.
+Stance: Support
+Reason: The nanoparticles are shown to reprogram tumor cell metabolism, restore T lymphocyte activity, and amplify the immune response.
+
+Note: I've kept the tone of my answers concise as per your request. If you'd like me to elaborate on any point, feel free to ask!",llama3.1:8b
+metformin-loaded fusogenic liposome improves the therapeutic efficacy and safety of doxorubicin in a breast cancer treatment.,Metformin-loaded fusogenic liposome improves the therapeutic efficacy and safety of doxorubicin in a breast cancer treatment.,support,"The study shows that the coadministration of metformin-loaded fusogenic liposomes with doxorubicin leads to a significant decrease in tumor volume, inhibition of metastases, and reduced cardiac alterations.","Here are the extracted information:
+
+Claim: Metformin-loaded fusogenic liposome improves the therapeutic efficacy and safety of doxorubicin in a breast cancer treatment.
+
+Stance: Support
+Reason: The study shows that the coadministration of metformin-loaded fusogenic liposomes with doxorubicin leads to a significant decrease in tumor volume, inhibition of metastases, and reduced cardiac alterations.",llama3.1:8b
+gut microbiota in the regulation of intestinal drug transporters: molecular mechanisms and pharmacokinetic implications.,Gut microbiota regulates intestinal drug transporters through molecular mechanisms.,support,The abstract cites mechanistic evidence from in vitro and animal studies to support this claim.,"Here is the extracted information:
+
+Claim: Gut microbiota regulates intestinal drug transporters through molecular mechanisms.
+
+Stance: Support
+Reason: The abstract cites mechanistic evidence from in vitro and animal studies to support this claim.",llama3.1:8b
+mtorc1 inhibition by metformin synergizes with dendrosomal nano-curcumin to induce apoptosis via modulation of pro- and anti-apoptotic proteins in breast cancer cells.,Metformin and dendrosomal nano-curcumin induce apoptosis in breast cancer cells.,support,"The study shows that the combination of these two treatments leads to cell death, increased activation of caspases, and morphological changes consistent with apoptosis.","Claim: Metformin and dendrosomal nano-curcumin induce apoptosis in breast cancer cells.
+Stance: Support
+Reason: The study shows that the combination of these two treatments leads to cell death, increased activation of caspases, and morphological changes consistent with apoptosis.
+
+Alternatively:
+
+ Claim: Combination therapy with metformin and dendrosomal nano-curcumin is effective against breast cancer.
+Stance: Support
+Reason: The study demonstrates that this treatment increases anticancer toxicity and induces apoptosis in two different types of breast cancer cells.",llama3.1:8b
+characteristic glycemic patterns during capivasertib treatment identified by continuous glucose monitoring: a case report.,Capivasertib treatment can cause hyperglycemia due to impaired glucose uptake and dysregulated hepatic glucose output.,support,"The study reports a case of hyperglycemia in a patient treated with capivasertib, which resolves during drug-free intervals.","Claim: Capivasertib treatment can cause hyperglycemia due to impaired glucose uptake and dysregulated hepatic glucose output.
+Stance: Support
+Reason: The study reports a case of hyperglycemia in a patient treated with capivasertib, which resolves during drug-free intervals.",llama3.1:8b
+metformin and its derivatives in breast cancer: from glycaemic control to tumor-intrinsic pathways.,Metformin and its derivatives can suppress breast cancer cell proliferation by targeting glucose metabolism.,support,Preclinical and epidemiological evidence indicates that metformin may reduce BC incidence and improve survival.,"Claim: Metformin and its derivatives can suppress breast cancer cell proliferation by targeting glucose metabolism.
+
+Stance: Support
+Reason: Preclinical and epidemiological evidence indicates that metformin may reduce BC incidence and improve survival.
+
+Claim: Targeting metabolic vulnerabilities in breast cancer prevention and therapy is a promising approach.
+
+Stance: Neutral
+Reason: The abstract neither supports nor contradicts this claim, but rather presents it as an established rationale for further investigation.",llama3.1:8b
+a prognostic model for breast cancer survival based on pcd and m6a gene interactions.,A prognostic model for breast cancer survival is developed using interactions between pcd and m6a gene mechanisms.,support,The study presents results from various analyses that support the accuracy of the proposed model in predicting breast cancer outcomes.,"Claim: A prognostic model for breast cancer survival is developed using interactions between pcd and m6a gene mechanisms.
+
+Stance: Support
+Reason: The study presents results from various analyses that support the accuracy of the proposed model in predicting breast cancer outcomes.",llama3.1:8b
+metformin with neoadjuvant chemotherapy in localized triple-negative and her2neu-positive breast cancer: a prospective phase 2 open-label randomized controlled trial (mcbeth).,Metformin does not significantly improve pathological complete response rates when added to neoadjuvant chemotherapy.,neutral,The study found no significant difference in pcr rates between the metformin group and control group.,"Claim: Metformin does not significantly improve pathological complete response rates when added to neoadjuvant chemotherapy.
+Stance: Neutral
+Reason: The study found no significant difference in pcr rates between the metformin group and control group.
+
+Note: The claim is neutral because it simply states a finding without taking a stance or promoting an opinion.",llama3.1:8b
+metformin enhances alpelisib sensitivity in her2+ breast cancer by suppressing cancer stemness and oncogenic signaling.,,,,"Here are the extracted information:
+
+1. Main claim: Metformin enhances alpelisib sensitivity in HER2+ breast cancer by suppressing cancer stemness and oncogenic signaling.
+
+2. Stance: Support
+3. Reason: The study's results show that metformin synergistically enhances the antitumor activity of alpelisib in HER2-positive breast cancer cell lines.",llama3.1:8b
+niosomal co-delivery of metformin and telaglenastat: a targeted nanotherapeutic strategy for breast cancer treatment and metastasis suppression in 2d and 3d models.,"Coordinated inhibition of glut-1 and gls-1-driven metabolism via met/tel-loaded niosomes achieves enhanced cytotoxicity, durable spheroid penetration, and strong anti-migratory and metabolic modulatory effects.",support,The study shows that the dual-drug niosomal formulation outperforms free and single-drug treatments in both 2D and 3D models.,"Claim: Coordinated inhibition of glut-1 and gls-1-driven metabolism via met/tel-loaded niosomes achieves enhanced cytotoxicity, durable spheroid penetration, and strong anti-migratory and metabolic modulatory effects.
+Stance: Support
+Reason: The study shows that the dual-drug niosomal formulation outperforms free and single-drug treatments in both 2D and 3D models.",llama3.1:8b
+metformin impairs breast cancer growth through the inhibition of prmt6.,Metformin impairs breast cancer growth through inhibition of PRMT6.,support,The study shows that metformin directly binds and inhibits PRMT6 activity.,"Claim: Metformin impairs breast cancer growth through inhibition of PRMT6.
+Stance: Support
+Reason: The study shows that metformin directly binds and inhibits PRMT6 activity.
+
+ Claim: Genetic disruption of the interaction between metformin and PRMT6 attenuates the inhibitory effect of metformin on breast cancer growth.
+Stance: Support
+Reason: The study's results support this claim as they show that genetic disruption reduces metformin's inhibitory effect.
+
+Claim: Metformin enhances DNA methylation by promoting the association of UHRF1 with chromatin.
+Stance: Support
+Reason: The study shows that metformin increases UHRF1 chromatin association, leading to enhanced DNA methylation.",llama3.1:8b
+autophagy stimulation influenced the angiogenesis and metastasis behavior of human triple-negative breast cancer cells.,Autophagy stimulation can influence angiogenesis and metastasis behavior of triple-negative breast cancer cells.,support,"The study shows that modifying autophagy response affects cell migration rate, endothelial cell migration, and metastasis in mice mammary glands.","Here is the extracted information:
+
+Claim: Autophagy stimulation can influence angiogenesis and metastasis behavior of triple-negative breast cancer cells.
+Stance: Support
+Reason: The study shows that modifying autophagy response affects cell migration rate, endothelial cell migration, and metastasis in mice mammary glands.",llama3.1:8b
+nir/us-responsive injectable hyaluronic acid-based nickel sulfide hydrogel as a smart platform for synergistic antitumor therapy.,"A new injectable hydrogel-based system can synergistically treat tumors through photothermal, chemodynamic, and chemotherapy.",support,In vitro and in vivo experiments demonstrated its efficacy in treating tumor tissues.,"Claim: A new injectable hydrogel-based system can synergistically treat tumors through photothermal, chemodynamic, and chemotherapy.
+Stance: Support
+Reason: In vitro and in vivo experiments demonstrated its efficacy in treating tumor tissues.",llama3.1:8b
+impact of sodium glucose cotransporter 2 inhibitors on bladder cancer and breast cancer: a pharmacovigilance analysis and mendelian randomization study.,SGLT2 inhibitors are associated with a higher risk of bladder cancer.,support,The study's pharmacovigilance analysis and Mendelian randomization results show a disproportionate association between SGLT2 inhibitors and bladder cancer.,"Claim: SGLT2 inhibitors are associated with a higher risk of bladder cancer.
+Stance: Support
+Reason: The study's pharmacovigilance analysis and Mendelian randomization results show a disproportionate association between SGLT2 inhibitors and bladder cancer.",llama3.1:8b
+"investigations of potential therapeutic targets from high-throughput, label-free, quantitative proteomic studies in mda-mb-468 cells treated with metformin and electrical pulses.",Electrical pulses combined with metformin can modulate cancer cell pathways.,support,Proteomic analyses revealed changes in protein expression levels after treatment.,"Claim: Electrical pulses combined with metformin can modulate cancer cell pathways.
+Stance: Support
+Reason: Proteomic analyses revealed changes in protein expression levels after treatment.
+
+Claim: LRCH4 and GNS are potential novel therapeutic targets against TNBC.
+Stance: Support
+Reason: Upregulation of LRCH4 and downregulation of GNS were associated with inhibition of proliferation and suppression of tumor growth, respectively.",llama3.1:8b
+"lep and foxo1 genes, as a proposed tumor suppressor autophagic cell death related genes, can be targeted by antidiabetic therapy in nondiabetic breast cancer patients.",Lep and Foxo1 genes can be targeted by antidiabetic therapy to treat non-diabetic breast cancer patients.,support,The study identified that these genes are associated with autophagic cell death and survival in non-obese and non-diabetic breast cancer patients.,"Here is the extracted information:
+
+Claim: Lep and Foxo1 genes can be targeted by antidiabetic therapy to treat non-diabetic breast cancer patients.
+Stance: Support
+Reason: The study identified that these genes are associated with autophagic cell death and survival in non-obese and non-diabetic breast cancer patients.",llama3.1:8b
